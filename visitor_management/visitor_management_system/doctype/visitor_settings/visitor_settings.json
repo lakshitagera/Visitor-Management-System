@@ -1,0 +1,71 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2026-04-21 10:20:50.501344",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "enable_nda",
+  "nda_text",
+  "1st_reminder_min",
+  "escalation_timeout_min",
+  "data_retention_months"
+ ],
+ "fields": [
+  {
+   "default": "0",
+   "fieldname": "enable_nda",
+   "fieldtype": "Check",
+   "label": "Enable NDA "
+  },
+  {
+   "fieldname": "nda_text",
+   "fieldtype": "Text Editor",
+   "label": "NDA Text "
+  },
+  {
+   "default": "30",
+   "fieldname": "1st_reminder_min",
+   "fieldtype": "Int",
+   "label": "1st Reminder (min)"
+  },
+  {
+   "default": "60",
+   "fieldname": "escalation_timeout_min",
+   "fieldtype": "Int",
+   "label": "Escalation Timeout (min)"
+  },
+  {
+   "default": "12",
+   "fieldname": "data_retention_months",
+   "fieldtype": "Int",
+   "label": "Data Retention (months)"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "issingle": 1,
+ "links": [],
+ "modified": "2026-04-21 10:39:29.166978",
+ "modified_by": "Administrator",
+ "module": "Visitor Management System",
+ "name": "Visitor Settings",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

@@ -1,0 +1,220 @@
+{
+ "actions": [],
+ "autoname": "autoincrement",
+ "creation": "2026-04-20 20:28:08.494261",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "basic_details_section",
+  "full_name",
+  "email",
+  "column_break_qlbd",
+  "phone_number",
+  "company",
+  "identity_section",
+  "id_type",
+  "id_number",
+  "vehicle_number",
+  "column_break_lsyu",
+  "visitor_photo",
+  "visit_details_section",
+  "purpose",
+  "host_employee",
+  "column_break_qhdn",
+  "expected_arrival",
+  "workflow_section",
+  "status",
+  "badge_number",
+  "visit_duration",
+  "rejection_reason",
+  "column_break_ieef",
+  "check_in_time",
+  "check_out_time",
+  "nda_acknowledged",
+  "reminder_sent",
+  "escalation_sent"
+ ],
+ "fields": [
+  {
+   "fieldname": "basic_details_section",
+   "fieldtype": "Section Break",
+   "label": "Basic Details"
+  },
+  {
+   "fieldname": "full_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Full Name ",
+   "reqd": 1
+  },
+  {
+   "fieldname": "phone_number",
+   "fieldtype": "Phone",
+   "in_list_view": 1,
+   "label": "Phone Number ",
+   "reqd": 1
+  },
+  {
+   "fieldname": "email",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Email",
+   "reqd": 1
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Data",
+   "label": "Company "
+  },
+  {
+   "fieldname": "identity_section",
+   "fieldtype": "Section Break",
+   "label": "Identity and Security"
+  },
+  {
+   "fieldname": "id_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "ID Type ",
+   "options": "Passport\nAadhaar\nDriver's Licence\nVoter ID\nOther",
+   "reqd": 1
+  },
+  {
+   "fieldname": "id_number",
+   "fieldtype": "Password",
+   "label": "ID Number ",
+   "reqd": 1
+  },
+  {
+   "fieldname": "visitor_photo",
+   "fieldtype": "Attach Image",
+   "label": "Visitor Photo",
+   "mandatory_depends_on": "doc.status !== \"Pre-registered\"",
+   "options": "Stored in Frappe attachment"
+  },
+  {
+   "fieldname": "purpose",
+   "fieldtype": "Select",
+   "label": "Purpose ",
+   "options": "Meeting\nDelivery\nInterview\nMaintenance\nOther",
+   "reqd": 1
+  },
+  {
+   "fieldname": "host_employee",
+   "fieldtype": "Link",
+   "label": "Host Employee",
+   "options": "Employee",
+   "reqd": 1
+  },
+  {
+   "fieldname": "workflow_section",
+   "fieldtype": "Section Break",
+   "label": "System Tracking "
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Pre-Registered\nPending Approval\nApproved\nRejected\nChecked-in\nChecked-out\nExpired\nOverstay"
+  },
+  {
+   "fieldname": "badge_number",
+   "fieldtype": "Data",
+   "label": "Badge Number ",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "nda_acknowledged",
+   "fieldtype": "Check",
+   "label": "NDA Acknowledged "
+  },
+  {
+   "fieldname": "rejection_reason",
+   "fieldtype": "Small Text",
+   "label": "Rejection Reason",
+   "mandatory_depends_on": "doc.workflow_state == \"Rejected\" && doc.name",
+   "read_only_depends_on": "doc.workflow_state != \"Rejected\""
+  },
+  {
+   "fieldname": "vehicle_number",
+   "fieldtype": "Data",
+   "label": "Vehicle Number "
+  },
+  {
+   "fieldname": "expected_arrival",
+   "fieldtype": "Datetime",
+   "label": "Expected Arrival",
+   "reqd": 1
+  },
+  {
+   "fieldname": "check_in_time",
+   "fieldtype": "Datetime",
+   "label": "Check in Time ",
+   "read_only": 1
+  },
+  {
+   "fieldname": "check_out_time",
+   "fieldtype": "Datetime",
+   "label": "Check out Time  ",
+   "read_only": 1
+  },
+  {
+   "fieldname": "visit_duration",
+   "fieldtype": "Int",
+   "label": "Visit Duration",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_qlbd",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_lsyu",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "visit_details_section",
+   "fieldtype": "Section Break",
+   "label": "Visit Details "
+  },
+  {
+   "fieldname": "column_break_qhdn",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_ieef",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "reminder_sent",
+   "fieldtype": "Check",
+   "label": "Reminder Sent",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "escalation_sent",
+   "fieldtype": "Check",
+   "label": "Escalation Sent ",
+   "read_only": 1
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-05-12 14:57:20.001458",
+ "modified_by": "Administrator",
+ "module": "Visitor Management System",
+ "name": "Visitor",
+ "naming_rule": "Autoincrement",
+ "owner": "Administrator",
+ "permissions": [],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

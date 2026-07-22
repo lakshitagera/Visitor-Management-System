@@ -1,0 +1,40 @@
+{
+ "add_total_row": 0,
+ "add_translate_data": 0,
+ "columns": [],
+ "creation": "2026-05-04 20:00:56.646727",
+ "disabled": 0,
+ "docstatus": 0,
+ "doctype": "Report",
+ "filters": [],
+ "idx": 0,
+ "is_standard": "Yes",
+ "letter_head": null,
+ "modified": "2026-05-04 20:00:56.646727",
+ "modified_by": "Administrator",
+ "module": "Visitor Management System",
+ "name": "Daily Visitor Report",
+ "owner": "Administrator",
+ "prepared_report": 0,
+ "ref_doctype": "Visitor",
+ "report_name": "Daily Visitor Report",
+ "report_type": "Script Report",
+ "roles": [
+  {
+   "role": "System Manager"
+  },
+  {
+   "role": "VMS Admin"
+  },
+  {
+   "role": "VMS Receptionist"
+  },
+  {
+   "role": "VMS Security"
+  },
+  {
+   "role": "VMS Host"
+  }
+ ],
+ "timeout": 0
+}

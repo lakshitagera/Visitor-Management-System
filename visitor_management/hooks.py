@@ -5,6 +5,23 @@ app_description = "Digital visitor tracking"
 app_email = "lakshitagera25@gmail.com"
 app_license = "mit"
 
+scheduler_events = {
+    "all": [
+        "visitor_management.visitor_management_system.doctype.visitor.visitor_scheduler.check_visitor_timeouts"
+    ],
+    "cron": {
+        "*/10 * * * *": [
+            "visitor_management.visitor_management_system.doctype.visitor.tasks.check_overstay"
+        ]
+    }
+}
+
+jinja = {
+    "methods": [
+        "visitor_management.visitor_management_system.utils.get_qr_base64"
+    ]
+}
+
 # Apps
 # ------------------
 
